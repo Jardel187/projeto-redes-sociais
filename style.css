@@ -29,28 +29,60 @@ body {
 /* o main fica sobre o body */
 
 main {
-    display: flex;
-    justify-content: center; /* Alinha horizontalmente */
-    align-items: center;     /* Alinha verticalmente */
-    height: 100vh;
+   position: relative;
+   height: 100%;
 }
 
 /* configuracao do telefone */
 
 section#telefone {
+    
+    /* posicionamento do background */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* como ele vai aparcer */
     height: 627px;
     width: 311px;
-    background: url('imagens/frame-iphone.png') no-repeat;
+    background: url('imagens/frame-iphone.png') no-repeat ;
+   
 
 }
 
 iframe#tela {
     position: relative;
-    top: 81px;
+    top: 82px;
     left: 22px;
-    width: 268px;
+    width: 266px;
     height: 471px;
 
 }
 
+section#rede-socias {
+    text-align: right;
+}
 
+section#rede-socias img {
+    width: 60px;  /* largura */
+    
+    margin: 10px; /* separacao */
+    
+    border-radius: 50%; /* esse % significa que vai so ocupar metade se a metade for redoda ele vai fica redondo */
+    
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.521);
+    
+    box-sizing: border-box; /* FAz com q a borda faca parte da caixa */
+
+}
+
+section#rede-socias img:hover {
+    border: 2px solid white ;
+    
+    transform: translate(-2px, -2px); /* da um efeito de afastada no    hover */
+
+    box-shadow: 5px 5px 5px 10px rgba(0, 0, 0, 0.212);
+    transition: transform .3s, border 1s; /* faz uma trasicao */
+    
+}
